@@ -32,6 +32,14 @@ const User = sequelize.define(
         this.setDataValue("password", hashed);
       },
     },
+    isVerified: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
+    },
+    verificationToken: {
+        type: DataTypes.STRING,
+        allowNull: true
+    }
   },
   {
     tableName: "users",
